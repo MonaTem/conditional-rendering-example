@@ -8,8 +8,10 @@ const DATA = [
 
 const Item = ({id}) => {
   const selectedItems = DATA.filter(item => id === item.id);
+  // console.log(selectedItems);
   const selectedItem = selectedItems[0];
-  return <span><p>{selectedItem.name} - {selectedItem.capital}</p></span>;
+  // console.log(selectedItem);
+  return <p>{selectedItem.name} - {selectedItem.capital}</p>;
 }
 
 export default Item;

@@ -13,15 +13,15 @@ class App extends Component {
   }
 
   handleClick(id) {
-    this.setState({clickedItemid: id});
+    this.setState({clickedItemId: id});
   }
 
   render() {
     return (
       <React.Fragment>
-        {!this.state.clickedItemId ?
+        {this.state.clickedItemId === null ?
           <List handleClick={this.handleClick}/> :
-          <Item id={this.clickedItemid} />
+          <Item id={this.state.clickedItemId} />
         }
         {/* <Item id={3} />
         <List /> */}
